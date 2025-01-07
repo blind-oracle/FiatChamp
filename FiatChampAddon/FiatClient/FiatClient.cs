@@ -601,7 +601,7 @@ public class FiatClient : IFiatClient
 
       // vehicle.Location = vehicleLocation;
 
-      Log.Debug("{0}", vehicleLocation.Dump());
+      // Log.Debug("{0}", vehicleLocation.Dump());
     }
 
     return vehicleResponse.Vehicles;
