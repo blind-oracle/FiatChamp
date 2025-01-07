@@ -592,14 +592,14 @@ public class FiatClient : IFiatClient
 
       vehicle.Details = vehicleDetails;
 
-      var vehicleLocation = await _apiUrl
-        .WithClient(_defaultHttpClient)
-        .AppendPathSegments("v1", "accounts", userUid, "vehicles", vehicle.Vin, "location", "lastknown")
-        .WithHeaders(WithAwsDefaultParameter(_apiKey))
-        .AwsSign(awsCredentials, _awsEndpoint)
-        .GetJsonAsync<VehicleLocation>();
+      // var vehicleLocation = await _apiUrl
+      //   .WithClient(_defaultHttpClient)
+      //   .AppendPathSegments("v1", "accounts", userUid, "vehicles", vehicle.Vin, "location", "lastknown")
+      //   .WithHeaders(WithAwsDefaultParameter(_apiKey))
+      //   .AwsSign(awsCredentials, _awsEndpoint)
+      //   .GetJsonAsync<VehicleLocation>();
 
-      vehicle.Location = vehicleLocation;
+      // vehicle.Location = vehicleLocation;
 
       Log.Debug("{0}", vehicleLocation.Dump());
     }
